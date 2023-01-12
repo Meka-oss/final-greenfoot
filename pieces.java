@@ -1,28 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import greenfoot.Color;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
 /**
- * Write a description of class square here.
+ * Write a description of class pieces here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class square extends Actor
+public class pieces extends Actor
 {
     /**
-     * Act - do whatever the square wants to do. This method is called whenever
+     * Act - do whatever the pieces wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
-    GreenfootImage rectangle = new GreenfootImage(100, 100);
-    public String location = "";
     
     Dictionary x = new Hashtable();
     Dictionary y = new Hashtable();
     
-    public square(String c,int flocationx,int flocationy)
+    public pieces()
     {
         x.put(150,"a");
         x.put(250,"b");
@@ -42,25 +38,27 @@ public class square extends Actor
         y.put(750,"7");
         y.put(850,"8");
         
+        x.put("a",150);
+        x.put("b",250);
+        x.put("c",350);
+        x.put("d",450);
+        x.put("e",550);
+        x.put("f",650);
+        x.put("g",750);
+        x.put("h",850);
         
-        if(c=="green")
-        {
-            rectangle.setColor(new Color(118,150,86));
-        }
-        if(c=="white")
-        {
-            rectangle.setColor(new Color(238,238,210));
-        }
-        rectangle.fill();
-        setImage(rectangle);
-        
-        location += x.get(flocationx);
-        location += y.get(flocationy);
-        
+        y.put("1",150);
+        y.put("2",250);
+        y.put("3",350);
+        y.put("4",450);
+        y.put("5",550);
+        y.put("6",650);
+        y.put("7",750);
+        y.put("8",850);
     }
-    
     
     public void act() 
     {
+        // Add your action code here.
     }    
 }
