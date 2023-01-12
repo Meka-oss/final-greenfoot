@@ -13,14 +13,23 @@ public class pawn extends pieces
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootImage p = new GreenfootImage("\\images\\pawn_white.png");
+    GreenfootImage wp = new GreenfootImage("\\images\\pawn_white.png");
+    GreenfootImage bp = new GreenfootImage("\\images\\pawn_black.png");
     
-    public pawn(String locationx,String locationy)
+    public pawn(String color, String locationx,String locationy)
     {
         super();
-        p.scale(100,100);
-        setImage(p);
         
+        wp.scale(100,100);
+        bp.scale(100,100);
+        if(color =="white")
+        {
+            setImage(wp);
+        }
+        if(color =="black")
+        {
+            setImage(bp);
+        }
     }
     
     public void act() 

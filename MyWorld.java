@@ -98,8 +98,15 @@ public class MyWorld extends World
         for(int i = 1;i<9;i++)
         {
             String k = Integer.toString(i);
-            pieces test = new pawn("a",k);
+            pieces test = new pawn("black","a",k);
             addObject(test,(int)x.get(k),(int)x.get("g"));
+        }
+        
+        for(int i = 1;i<9;i++)
+        {
+            String k = Integer.toString(i);
+            pieces test = new pawn("white","a",k);
+            addObject(test,(int)x.get(k),(int)x.get("b"));
         }
     }
 }
