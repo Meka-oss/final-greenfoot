@@ -95,7 +95,11 @@ public class MyWorld extends World
             }
         }
         
-        pieces test = new pawn("a","1");
-        addObject(test,(int)x.get("a"),(int)x.get("1"));
+        for(int i = 1;i<9;i++)
+        {
+            String k = Integer.toString(i);
+            pieces test = new pawn("a",k);
+            addObject(test,(int)x.get(k),(int)x.get("g"));
+        }
     }
 }
